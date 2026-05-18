@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IFKYY • Canva Gallery</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+/* ================= GLOBAL ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+}
+
+/* ================= NAV ================= */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:18px 8%;
+backdrop-filter:blur(15px);
+background:rgba(255,255,255,0.03);
+z-index:999;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+background:linear-gradient(to right,#fff,#ffd700);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+a{
+text-decoration:none;
+color:#ffd700;
+}
+
+/* ================= TITLE ================= */
+h1{
+text-align:center;
+margin-top:120px;
+font-size:45px;
+}
+
+h1 span{
+color:#ffd700;
+}
+
+/* ================= GALLERY ================= */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:60px 8%;
+}
+
+.item{
+border-radius:18px;
+overflow:hidden;
+cursor:pointer;
+border:1px solid rgba(255,215,0,0.1);
+transition:0.3s;
+}
+
+.item:hover{
+transform:scale(1.03);
+box-shadow:0 10px 30px rgba(255,215,0,0.2);
+}
+
+.item img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+/* ================= POPUP ================= */
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:1000;
+}
+
+.popup img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+border:2px solid #ffd700;
+}
+
+.popup.active{
+display:flex;
+}
+
+/* ================= BUTTON ================= */
+.back{
+display:inline-block;
+margin:30px auto;
+padding:12px 20px;
+border:1px solid #ffd700;
+border-radius:12px;
+color:white;
+text-align:center;
+}
+
+/* ================= FOOTER ================= */
+footer{
+text-align:center;
+padding:30px;
+color:#888;
+border-top:1px solid rgba(255,215,0,0.1);
+margin-top:50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="logo">IFKYY CANVA</div>
+<a href="index.html">⬅ Kembali</a>
+</nav>
+
+<h1>🎨 My <span>Canva Designs</span></h1>
+
+<!-- GALLERY -->
+<div class="gallery">
+
+<div class="item"><img src="g30spki25.png" onclick="openImg(this.src)"></div>
+<div class="item"><img src="pahlawan25.png" onclick="openImg(this.src)"></div>
+<div class="item"><img src="kartini26.png" onclick="openImg(this.src)"></div>
+<div class="item"><img src="guru26.png" onclick="openImg(this.src)"></div>
+<div class="item"><img src="canva5.jpg" onclick="openImg(this.src)"></div>
+<div class="item"><img src="canva6.jpg" onclick="openImg(this.src)"></div>
+
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup" onclick="closeImg()">
+<img id="popupImg">
+</div>
+
+<!-- SCRIPT -->
+<script>
+
+function openImg(src){
+document.getElementById("popupImg").src = src;
+document.getElementById("popup").classList.add("active");
+}
+
+function closeImg(){
+document.getElementById("popup").classList.remove("active");
+}
+
+</script>
+
+<!-- FOOTER -->
+<footer>
+© 2026 IFKYY Canva Gallery
+</footer>
+
+</body>
+</html>

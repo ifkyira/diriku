@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IFKYY • Games</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body{
+margin:0;
+font-family:Poppins,sans-serif;
+background:#050505;
+color:white;
+padding-top:80px; /* 🔥 FIX utama agar tidak ketutup navbar */
+}
+
+/* ================= NAV FIX TOTAL ================= */
+nav{
+position:fixed;
+top:0;
+left:0;
+right:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(10,10,10,0.92);
+backdrop-filter:blur(18px);
+z-index:99999;
+border-bottom:1px solid rgba(255,215,0,0.2);
+box-sizing:border-box;
+}
+
+.logo{
+font-weight:800;
+background:linear-gradient(to right,#fff,#ffd700);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+font-size:24px;
+}
+
+/* BACK BUTTON FIX */
+.back-home{
+color:#ffd700;
+text-decoration:none;
+font-weight:600;
+padding:8px 14px;
+border:1px solid rgba(255,215,0,0.4);
+border-radius:10px;
+transition:0.3s;
+white-space:nowrap;
+display:inline-flex;
+align-items:center;
+gap:6px;
+}
+
+.back-home:hover{
+background:#ffd700;
+color:#000;
+transform:scale(1.05);
+}
+
+/* TITLE FIX */
+h1{
+text-align:center;
+margin-top:40px; /* 🔥 sudah aman karena body padding-top */
+font-size:45px;
+}
+
+h1 span{
+color:#ffd700;
+}
+
+/* GRID */
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+padding:50px 8%;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,215,0,0.1);
+border-radius:20px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(255,215,0,0.2);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.content{
+padding:20px;
+}
+
+.content h2{
+color:#ffd700;
+margin-bottom:10px;
+}
+
+/* DETAIL */
+.section{
+padding:80px 8%;
+border-top:1px solid rgba(255,215,0,0.1);
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+color:#888;
+border-top:1px solid rgba(255,215,0,0.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV (FULL FIXED) -->
+<nav>
+<div class="logo">IFKYY GAMES</div>
+
+<a href="index.html" class="back-home">
+⬅ Kembali
+</a>
+
+</nav>
+
+<h1>🎮 My <span>Game Collection</span></h1>
+
+<!-- GRID GAME -->
+<div class="container">
+
+<a href="#ccff7" class="card">
+<img src="ccff7.jpg">
+<div class="content">
+<h2>Crisis Core FF7</h2>
+<p>RPG dengan cerita emosional Zack Fair.</p>
+</div>
+</a>
+
+<a href="#pubgm" class="card">
+<img src="pubgm.jpg">
+<div class="content">
+<h2>PUBG Mobile</h2>
+<p>Battle royale kompetitif dan intens.</p>
+</div>
+</a>
+
+<a href="#hh" class="card">
+<img src="hh.jpg">
+<div class="content">
+<h2>Hotel Hideaway</h2>
+<p>Game sosial virtual santai.</p>
+</div>
+</a>
+
+<a href="#roblox" class="card">
+<img src="rb.jpg">
+<div class="content">
+<h2>Roblox</h2>
+<p>Platform game dengan jutaan mode.</p>
+</div>
+</a>
+
+<a href="#clonehero" class="card">
+<img src="clonehero.jpg">
+<div class="content">
+<h2>Clone Hero</h2>
+<p>Rhythm game musik cepat.</p>
+</div>
+</a>
+
+<a href="#castlevania" class="card">
+<img src="castlevania.jpg">
+<div class="content">
+<h2>Castlevania</h2>
+<p>Pertarungan melawan Dracula di kastil gelap.</p>
+</div>
+</a>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2026 IFKYY Games Page
+</footer>
+
+</body>
+</html>
